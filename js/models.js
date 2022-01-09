@@ -1,6 +1,14 @@
+/*
+
+MODELS.JS
+Description: Contains all of the models information along with their list of materials and costs. The materials and pricing should be web scraped or pulled from a product API.
+
+*/
+
 //Random price used for demo purposes only
 function randomprice() { var precision = 100; var maxprice = 30; var minprice = 1; return String(Math.floor(Math.random() * (maxprice * precision - minprice * precision) + minprice * precision) / (minprice*precision)); }
 
+//Object with all model information
 var modelsobject = {
   "models": [
     {

@@ -1,7 +1,14 @@
+/*
+
+MODELPICKER.JS
+Description: Handles steps 2 and 3 in the calculator carousel. It involves displaying the models, knowing which model is chosen then providing a list of materials and costs.
+
+*/
+
 //Create model cards and details when page loads
 window.onload = function() {
   /*
-  CAROUSEL STEP 2
+  MODEL CALCULATOR STEP 2
   */
 
   var modelviewer = document.getElementById("modelpicker");
@@ -22,7 +29,7 @@ window.onload = function() {
   );
 
   /*
-  CAROUSEL STEP 3
+  MODEL CALCULATOR STEP 3
   */
 
   //Model details function
@@ -32,7 +39,7 @@ window.onload = function() {
     var totalprice = 0;
     var modelkey = this.getAttribute("data-modelid");
 
-    //Build first part
+    //Build first part of total price section
     listbuilder += '<h1 class="mb-3">' + modelsobject["models"][modelkey]["title"] + ' material and pricing details</h1>';
     listbuilder += '<div class="list-group">';
 
@@ -51,7 +58,7 @@ window.onload = function() {
       }
     );
 
-    //Build last part
+    //Build last part of total price section
     listbuilder += '</div>';
     listbuilder += '<h1 class="mt-4 display-6">Model total: $' + totalprice + ' dollars</h1>';
 
